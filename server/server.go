@@ -21,9 +21,12 @@ func main() {
 	var port string
 	flag.StringVar(&port, "port", "8080", "Default port is 8080")
 
+	var webroot string
+	flag.StringVar(&webroot, "webroot", "/var/webroot", "Default root is /var/webroot")
+
 	flag.Parse()
 	//port := "8080"
-	webroot := "/var/webroot"
+	//webroot := "/var/webroot"
 
 	log.Printf("Serving on port %s", port)
 
