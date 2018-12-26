@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"flag"
 )
 
 /*
@@ -15,7 +16,13 @@ import (
 */
 
 func main() {
-	port := "8080"
+
+	//port := flag.String("port", "8080", "Default port is 8080")
+	var port string
+	flag.StringVar(&port, "port", "8080", "Default port is 8080")
+
+	flag.Parse()
+	//port := "8080"
 	webroot := "/var/webroot"
 
 	log.Printf("Serving on port %s", port)

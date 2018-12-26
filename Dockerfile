@@ -8,4 +8,4 @@ ADD ./index.html /var/webroot/
 
 RUN chmod +x /usr/local/bin/server
 
-ENTRYPOINT ["/usr/local/bin/server"]
+#ENTRYPOINT ["usr/local/bin/server"]
